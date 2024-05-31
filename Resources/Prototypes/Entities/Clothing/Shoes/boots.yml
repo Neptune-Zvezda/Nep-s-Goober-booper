@@ -232,13 +232,3 @@
     sprite: Clothing/Shoes/Boots/cowboybootsfancy.rsi
   - type: Clothing
     sprite: Clothing/Shoes/Boots/cowboybootsfancy.rsi
-
-- type: entity
-  parent: ClothingShoesBaseButcherable
-  id: ClothingShoesBootsDannyPhantom
-  name: Funny Boots go BRRR
-  components:
-  - type: Sprite
-    sprite: DannyPhantomBoot.rsi
-  - type: Clothing
-    sprite: DannyPhantomBoot.rsi

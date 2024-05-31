@@ -282,24 +282,3 @@
   - type: StaticPrice
     price: 1
 
-- type: entity
-  parent: ClothingHeadBase
-  id: ClothingHeadDannyPhantomMask
-  name: DannyPhantomMask
-  description: How do you have this? Funny Kira Face Go Brrrr
-  components:
-  - type: Sprite
-    sprite: PhannyDantomFace.rsi
-  - type: Clothing
-    sprite: PhannyDantomFace.rsi
-
-- type: entity
-  parent: ClothingHeadBase
-  id: ClothingHeadDannyPhantomMask
-  name: DannyPhantomHair
-  description: How do you have this? Funny Kira Hair Go Brrrr
-  components:
-  - type: Sprite
-    sprite: DannyPhantomHair.rsi
-  - type: Clothing
-    sprite: DannyPhantomHair.rsi
