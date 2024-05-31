@@ -43,11 +43,9 @@
   description: How do you have this? Funny Kira Face Go Brrrr
   components:
   - type: Sprite
-    sprite: Goobstation,clothing/Head/Misc/PhannyDantomFace.rsi
-    state: icon
+    sprite: Goobstation/clothing/Head/PhannyDantomFace.rsi
   - type: Clothing
-    sprite: Goobstation,clothing/Head/Misc/PhannyDantomFace.rsi
-    state: equipped-HELMET
+    sprite: Goobstation/clothing/Head/PhannyDantomFace.rsi
 
 - type: entity
   parent: ClothingHeadBase
@@ -57,28 +55,9 @@
   description: How do you have this? Funny Kira Hair Go Brrrr
   components:
   - type: Sprite
-    sprite: Goobstation/clothing/Head/Misc/DannyPhantomHair.rsi
-    state: icon
+    sprite: Goobstation/clothing/Head/DannyPhantomHair.rsi
   - type: Clothing
-    sprite: Goobstation/clothing/Head/Misc/DannyPhantomHair.rsi
-    state: equipped-HELMET
-
-- type: entity
-  parent: ClothingUniformBase
-  id: DannyPhantomSuitGhost
-  name: Ghostly Phanom Hero Suit
-  suffix: Kira
-  description: How did you get this? anyway say hi to Kira.
-  components:
-  - type: Sprite
-    sprite: Goobstation/clothing/Uniforms/DannyPhantom/DannyPhantomSuitGhost.rsi
-    state: icon
-  - type: Clothing
-    sprite: Goobstation/clothing/Uniforms/DannyPhantom/DannyPhantomSuitGhost.rsi
-    state: equipped-INNERCLOTHING
-  - type: Tag
-    tags:
-    -  GhostFeet
+    sprite: Goobstation/clothing/Head/DannyPhantomHair.rsi
 
 - type: entity
   parent: ClothingUniformBase
@@ -88,11 +67,9 @@
   description: How did you get this? anyway say hi to Kira.
   components:
   - type: Sprite
-    sprite: Goobstation/clothing/Uniforms/DannyPhantom/DannyPhantomSuitGhostSolid.rsi
-    state: icon
+    sprite: Goobstation/clothing/Uniforms/DannyPhantomSuitGhostSolid.rsi
   - type: Clothing
-    sprite: Goobstation/clothing/Uniforms/DannyPhantom/DannyPhantomSuitGhostSolid.rsi
-    state :equipped-INNERCLOTHING
+    sprite: Goobstation/clothing/Uniforms/DannyPhantomSuitGhostSolid.rsi
   - type: Tag
     tags:
     -  GhostFeet
@@ -105,11 +82,9 @@
   description: Be a phantom and a high school boy all over again with this suit!
   components:
   - type: Sprite
-    sprite: Goobstation/clothing/Uniforms/DannyPhantom/DannyPhantomSuitHuman.rsi
-    state: icon
+    sprite: Goobstation/clothing/Uniforms/DannyPhantomSuitHuman.rsi
   - type: Clothing
-    sprite: Goobstation/clothing/Uniforms/DannyPhantom/DannyPhantomSuitHuman.rsi
-    state: equipped-INNERCLOTHING
+    sprite: Goobstation/clothing/Uniforms/DannyPhantomSuitHuman.rsi
 
 - type: entity
   parent: ClothingShoesBaseButcherable
@@ -118,10 +93,8 @@
   suffix: Kira
   components:
   - type: Sprite
-    sprite: Goobstation/clothing/Shoes/Boots/DannyPhantomBoot.rsi
-    state: icon
+    sprite: Goobstation/clothing/Shoes//DannyPhantomBoot.rsi
   - type: Clothing
-    sprite: Goobstation/clothing/Shoes/Boots/DannyPhantomBoot.rsi
-    state: equipped-FEET
+    sprite: Goobstation/clothing/Shoes/DannyPhantomBoot.rsi
 
 # Admin Personal Clothing
