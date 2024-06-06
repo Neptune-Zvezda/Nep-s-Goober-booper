@@ -46,6 +46,15 @@
     sprite: Goobstation/clothing/Head/PhannyDantomFace.rsi
   - type: Clothing
     sprite: Goobstation/clothing/Head/PhannyDantomFace.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Slash: 0.01
+        Blunt: 0.01
+        Heat: 0.01
+  - type: Tag
+    tags:
+    - HamsterWearable
 
 - type: entity
   parent: ClothingHeadBase
@@ -58,9 +67,13 @@
     sprite: Goobstation/clothing/Head/DannyPhantomHair.rsi
   - type: Clothing
     sprite: Goobstation/clothing/Head/DannyPhantomHair.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Heat: 0.95
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingShoesBaseButcherable
   id: DannyPhantomSuitGhostSolid
   name: Phanom Hero Suit
   suffix: Kira
@@ -85,6 +98,35 @@
     sprite: Goobstation/clothing/Uniforms/DannyPhantomSuitHuman.rsi
   - type: Clothing
     sprite: Goobstation/clothing/Uniforms/DannyPhantomSuitHuman.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Heat: 0.95
+
+- type: entity
+  parent: ClothingHandsBase
+  id: DannyPhantomGloves
+  name: Phantom Hero Gloves
+  suffix: Kira
+  description: Punch them ghosts with these special gloves!
+  components:
+  - type: Sprite
+    sprite: Goobstation/clothing/Hands/DannyPhantomGloves.rsi
+  - type: Clothing
+    sprite: Goobstation/clothing/Hands/DannyPhantomGloves.rsi
+  - type: Insulated
+  - type: Fiber
+    fiberMaterial: fibers-nanomachines
+  - type: FingerprintMask
+  - type: Armor
+    modifiers:
+      coefficients:
+        Heat: 0.95
+  - type: MeleeWeapon
+    attackRate: 1.2
+    damage:
+      types:
+        Blunt: 1
 
 - type: entity
   parent: ClothingShoesBaseButcherable
@@ -96,5 +138,10 @@
     sprite: Goobstation/clothing/Shoes//DannyPhantomBoot.rsi
   - type: Clothing
     sprite: Goobstation/clothing/Shoes/DannyPhantomBoot.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Heat: 0.95
+
 
 # Admin Personal Clothing
