@@ -69,3 +69,7 @@
 - type: lobbyBackground
   id: JustAWeekAway
   background: /Textures/LobbyScreens/justaweekaway.webp
+
+- type: lobbyBackground
+  id: ThePenIncident
+  background: /Textures/LobbyScreens/ThePenincident.webp
