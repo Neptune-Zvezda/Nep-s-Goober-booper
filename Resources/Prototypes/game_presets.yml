@@ -7,6 +7,7 @@
   description: survival-description
   rules:
     - RampingStationEventScheduler
+    - GameRuleMeteorScheduler
     - BasicRoundstartVariation
 
 - type: gamePreset
@@ -20,33 +21,7 @@
     - Revolutionary
     - Zombie
     - RampingStationEventScheduler
-
-- type: gamePreset
-  id: AllAtOnceNoZeds
-  alias:
-  - allatoncefuckzombies
-  name: all-at-once-nozeds-title
-  description: all-at-once-nozeds-description
-  showInVote: false
-  rules:
-    - Nukeops
-    - Traitor
-    - Revolutionary
-    - RampingStationEventScheduler
-
-#- type: gamePreset
-#  id: AllAtOnceWizard
-#  alias:
-#  - magicalallatonce
-#  name: all-at-once-wizard-title
-#  description: all-at-once-wizard-description
-#  showInVote: false
-#  rules:
-#    - Nukeops
-#    - Traitor
-#    - Revolutionary
-#    - Wizard
-#    - RampingStationEventScheduler
+    - GameRuleMeteorScheduler
 
 - type: gamePreset
   id: Extended
@@ -58,6 +33,7 @@
   description: extended-description
   rules:
   - BasicStationEventScheduler
+  - GameRuleMeteorScheduler
   - BasicRoundstartVariation
 
 - type: gamePreset
@@ -70,6 +46,7 @@
   description: greenshift-description
   rules:
   - BasicRoundstartVariation
+  - GameRuleMeteorScheduler
 
 - type: gamePreset
   id: Secret
@@ -91,6 +68,7 @@
   description: secret-description
   rules:
     - BasicStationEventScheduler
+    - GameRuleMeteorScheduler
 
 - type: gamePreset
   id: SecretGreenshift #For Admin Use: Runs Greenshift but shows "Secret" in lobby.
@@ -106,7 +84,7 @@
     - sandbox
   name: sandbox-title
   description: sandbox-description
-  showInVote: true
+  showInVote: false # Not suitable for use without admin intervention, since entity spamming can quickly crash a server
   maxPlayers: 5
   rules:
     - Sandbox
@@ -122,6 +100,7 @@
     - Traitor
     - SubGamemodesRule
     - BasicStationEventScheduler
+    - GameRuleMeteorScheduler
     - BasicRoundstartVariation
 
 - type: gamePreset
@@ -148,20 +127,8 @@
     - Nukeops
     - SubGamemodesRule
     - BasicStationEventScheduler
+    - GameRuleMeteorScheduler
     - BasicRoundstartVariation
-
-#- type: gamePreset
-#  id: Wizard
-#  alias:
-#    - wizard
-#  name: wizard-title
-#  description: wizard-description
-#  showInVote: false
-#  rules:
-#    - Wizard
-#    - SubGamemodesRule
-#    - BasicStationEventScheduler
-#    - BasicRoundstartVariation
 
 - type: gamePreset
   id: Revolutionary
@@ -176,6 +143,7 @@
     - Revolutionary
     - SubGamemodesRule
     - BasicStationEventScheduler
+    - GameRuleMeteorScheduler
     - BasicRoundstartVariation
 
 - type: gamePreset
@@ -192,4 +160,5 @@
   rules:
   - Zombie
   - BasicStationEventScheduler
+  - GameRuleMeteorScheduler
   - BasicRoundstartVariation

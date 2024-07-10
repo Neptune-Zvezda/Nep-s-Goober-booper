@@ -2,7 +2,8 @@
   id: Box
   mapName: 'Box Station'
   mapPath: /Maps/box.yml
-  minPlayers: 1
+  minPlayers: 0
+  maxPlayers: 85 # Goobstation - Limit mappool to highpop versions of maps only
   stations:
     Boxstation:
       stationProto: StandardNanotrasenStation
@@ -15,13 +16,11 @@
         - type: StationEmergencyShuttle
           emergencyShuttlePath: /Maps/Shuttles/emergency_box.yml
         - type: StationJobs
-          overflowJobs:
-            - Passenger
           availableJobs:
             #service
             Captain: [ 1, 1 ]
-            BlueshieldOfficer: [ 1, 1 ]
             NanotrasenRepresentative: [ 1, 1 ]
+            BlueshieldOfficer: [ 1, 1 ]
             HeadOfPersonnel: [ 1, 1 ]
             Bartender: [ 2, 2 ]
             Botanist: [ 3, 3 ]

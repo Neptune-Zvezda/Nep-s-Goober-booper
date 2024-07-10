@@ -3,6 +3,7 @@
   mapName: 'Oasis'
   mapPath: /Maps/oasis.yml
   minPlayers: 0
+  maxPlayers: 85 # Goobstation - Limit mappool to highpop versions of maps only
   stations:
     Oasis:
       stationProto: StandardNanotrasenStation
@@ -13,15 +14,13 @@
             !type:NanotrasenNameGenerator
             prefixCreator: 'B'
         - type: StationEmergencyShuttle
-          emergencyShuttlePath: /Maps/Shuttles/emergency_delta.yml
+          emergencyShuttlePath: /Maps/Shuttles/emergency_accordia.yml
         - type: StationJobs
-          overflowJobs:
-            - Passenger
           availableJobs:
             #service
             Captain: [ 1, 1 ]
+            NanotrasenRepresentative: [ 1, 1 ]
             BlueshieldOfficer: [ 1, 1 ]
-            NanotrasenRepresentative: [ 1, 1 ]            
             HeadOfPersonnel: [ 1, 1 ]
             Bartender: [ 2, 2 ]
             Botanist: [ 4, 4 ]

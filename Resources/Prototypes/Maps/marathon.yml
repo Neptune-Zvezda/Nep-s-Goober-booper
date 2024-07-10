@@ -2,8 +2,8 @@
   id: Marathon
   mapName: 'Marathon Station'
   mapPath: /Maps/marathon.yml
-  minPlayers: 0
-  maxPlayers: 100
+  minPlayers: 35
+  maxPlayers: 70
   stations:
     Marathon:
       stationProto: StandardNanotrasenStation
@@ -16,8 +16,6 @@
         - type: StationEmergencyShuttle
           emergencyShuttlePath: /Maps/Shuttles/emergency_rod.yml
         - type: StationJobs
-          overflowJobs:
-            - Passenger
           availableJobs:
             #service
             Captain: [ 1, 1 ]

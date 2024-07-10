@@ -1,4 +1,5 @@
 using Content.Shared.Maps;
+using Content.Shared.Roles;
 using Robust.Shared;
 using Robust.Shared.Configuration;
 using Robust.Shared.Physics.Components;
@@ -20,16 +21,16 @@ namespace Content.Shared.CCVar
             CVarDef.Create("server.id", "unknown_server_id", CVar.REPLICATED | CVar.SERVER);
 
         /// <summary>
-        ///     Name of the rules txt file in the "Resources/Server Info" dir. Include the extension.
+        ///     Guide Entry Prototype ID to be displayed as the server rules.
         /// </summary>
         public static readonly CVarDef<string> RulesFile =
-            CVarDef.Create("server.rules_file", "Rules.txt", CVar.REPLICATED | CVar.SERVER);
+            CVarDef.Create("server.rules_file", "DefaultRuleset", CVar.REPLICATED | CVar.SERVER);
 
         /// <summary>
-        ///     A loc string for what should be displayed as the title on the Rules window.
+        ///     Guide entry that is displayed by default when a guide is opened.
         /// </summary>
-        public static readonly CVarDef<string> RulesHeader =
-            CVarDef.Create("server.rules_header", "ui-rules-header", CVar.REPLICATED | CVar.SERVER);
+        public static readonly CVarDef<string> DefaultGuide =
+            CVarDef.Create("server.default_guide", "NewPlayer", CVar.REPLICATED | CVar.SERVER);
 
         /*
          * Ambience
@@ -122,6 +123,18 @@ namespace Content.Shared.CCVar
         /// </summary>
         public static readonly CVarDef<float>
             EventsRampingAverageChaos = CVarDef.Create("events.ramping_average_chaos", 6f, CVar.ARCHIVE | CVar.SERVERONLY);
+
+        /// <summary>
+        ///     Minimum time between meteor swarms in minutes.
+        /// </summary>
+        public static readonly CVarDef<float>
+            MeteorSwarmMinTime = CVarDef.Create("events.meteor_swarm_min_time", 12.5f, CVar.ARCHIVE | CVar.SERVERONLY);
+
+        /// <summary>
+        ///     Maximum time between meteor swarms in minutes.
+        /// </summary>
+        public static readonly CVarDef<float>
+            MeteorSwarmMaxTime = CVarDef.Create("events.meteor_swarm_max_time", 17.5f, CVar.ARCHIVE | CVar.SERVERONLY);
 
         /*
          * Game
@@ -226,6 +239,18 @@ namespace Content.Shared.CCVar
             GameRoleTimers = CVarDef.Create("game.role_timers", true, CVar.SERVER | CVar.REPLICATED);
 
         /// <summary>
+        /// Override default role requirements using a <see cref="JobRequirementOverridePrototype"/>
+        /// </summary>
+        public static readonly CVarDef<string>
+            GameRoleTimerOverride = CVarDef.Create("game.role_timer_override", "", CVar.SERVER | CVar.REPLICATED);
+
+        /// <summary>
+        /// If roles should be restricted based on whether or not they are whitelisted.
+        /// </summary>
+        public static readonly CVarDef<bool>
+            GameRoleWhitelist = CVarDef.Create("game.role_whitelist", true, CVar.SERVER | CVar.REPLICATED);
+
+        /// <summary>
         /// Whether or not disconnecting inside of a cryopod should remove the character or just store them until they reconnect.
         /// </summary>
         public static readonly CVarDef<bool>
@@ -291,8 +316,8 @@ namespace Content.Shared.CCVar
         /// <summary>
         /// Minimal overall played time.
         /// </summary>
-        public static readonly CVarDef<int> PanicBunkerMinOverallHours =
-            CVarDef.Create("game.panic_bunker.min_overall_hours", 10, CVar.SERVERONLY);
+        public static readonly CVarDef<int> PanicBunkerMinOverallMinutes =
+            CVarDef.Create("game.panic_bunker.min_overall_minutes", 600, CVar.SERVERONLY);
 
         /// <summary>
         /// A custom message that will be used for connections denied to the panic bunker
@@ -306,6 +331,48 @@ namespace Content.Shared.CCVar
         /// </summary>
         public static readonly CVarDef<bool> BypassBunkerWhitelist =
             CVarDef.Create("game.panic_bunker.whitelisted_can_bypass", true, CVar.SERVERONLY);
+
+        /*
+         * TODO: Remove baby jail code once a more mature gateway process is established. This code is only being issued as a stopgap to help with potential tiding in the immediate future.
+         */
+
+        /// <summary>
+        /// Whether the baby jail is currently enabled.
+        /// </summary>
+        public static readonly CVarDef<bool> BabyJailEnabled  =
+            CVarDef.Create("game.baby_jail.enabled", false, CVar.NOTIFY | CVar.REPLICATED | CVar.SERVER);
+
+        /// <summary>
+        /// Show reason of disconnect for user or not.
+        /// </summary>
+        public static readonly CVarDef<bool> BabyJailShowReason =
+            CVarDef.Create("game.baby_jail.show_reason", false, CVar.SERVERONLY);
+
+        /// <summary>
+        /// Maximum age of the account (from server's PoV, so from first-seen date) in minutes that can access baby
+        /// jailed servers.
+        /// </summary>
+        public static readonly CVarDef<int> BabyJailMaxAccountAge =
+            CVarDef.Create("game.baby_jail.max_account_age", 1440, CVar.SERVERONLY);
+
+        /// <summary>
+        /// Maximum overall played time allowed to access baby jailed servers.
+        /// </summary>
+        public static readonly CVarDef<int> BabyJailMaxOverallMinutes =
+            CVarDef.Create("game.baby_jail.max_overall_minutes", 120, CVar.SERVERONLY);
+
+        /// <summary>
+        /// A custom message that will be used for connections denied due to the baby jail.
+        /// If not empty, then will overwrite <see cref="BabyJailShowReason"/>
+        /// </summary>
+        public static readonly CVarDef<string> BabyJailCustomReason =
+            CVarDef.Create("game.baby_jail.custom_reason", string.Empty, CVar.SERVERONLY);
+
+        /// <summary>
+        /// Allow bypassing the baby jail if the user is whitelisted.
+        /// </summary>
+        public static readonly CVarDef<bool> BypassBabyJailWhitelist =
+            CVarDef.Create("game.baby_jail.whitelisted_can_bypass", true, CVar.SERVERONLY);
 
         /// <summary>
         /// Make people bonk when trying to climb certain objects like tables.
@@ -364,6 +431,14 @@ namespace Content.Shared.CCVar
         /// </summary>
         public static readonly CVarDef<string> RoundEndSoundCollection =
             CVarDef.Create("game.round_end_sound_collection", "RoundEnd", CVar.SERVERONLY);
+
+        /// <summary>
+        /// Whether or not to add every player as a global override to PVS at round end.
+        /// This will allow all players to see their clothing in the round screen player list screen,
+        /// but may cause lag during round end with very high player counts.
+        /// </summary>
+        public static readonly CVarDef<bool> RoundEndPVSOverrides =
+            CVarDef.Create("game.round_end_pvs_overrides", true, CVar.SERVERONLY);
 
         /*
          * Discord
@@ -767,7 +842,7 @@ namespace Content.Shared.CCVar
         ///     Minimum particle accelerator strength to create an admin alert message.
         /// </summary>
         public static readonly CVarDef<int> AdminAlertParticleAcceleratorMinPowerState =
-            CVarDef.Create("admin.alert.particle_accelerator_min_power_state", 3, CVar.SERVERONLY);
+            CVarDef.Create("admin.alert.particle_accelerator_min_power_state", 5, CVar.SERVERONLY); // strength 4
 
         /// <summary>
         ///     Should the ban details in admin channel include PII? (IP, HWID, etc)
@@ -807,6 +882,25 @@ namespace Content.Shared.CCVar
         /// </summary>
         public static readonly CVarDef<bool> AdminBypassMaxPlayers =
             CVarDef.Create("admin.bypass_max_players", true, CVar.SERVERONLY);
+
+        /*
+         * AHELP
+         */
+
+        /// <summary>
+        /// Ahelp rate limit values are accounted in periods of this size (seconds).
+        /// After the period has passed, the count resets.
+        /// </summary>
+        /// <seealso cref="AhelpRateLimitCount"/>
+        public static readonly CVarDef<int> AhelpRateLimitPeriod =
+            CVarDef.Create("ahelp.rate_limit_period", 2, CVar.SERVERONLY);
+
+        /// <summary>
+        /// How many ahelp messages are allowed in a single rate limit period.
+        /// </summary>
+        /// <seealso cref="AhelpRateLimitPeriod"/>
+        public static readonly CVarDef<int> AhelpRateLimitCount =
+            CVarDef.Create("ahelp.rate_limit_count", 10, CVar.SERVERONLY);
 
         /*
          * Explosions
@@ -984,7 +1078,7 @@ namespace Content.Shared.CCVar
         ///     Whether gas differences will move entities.
         /// </summary>
         public static readonly CVarDef<bool> SpaceWind =
-            CVarDef.Create("atmos.space_wind", false, CVar.SERVERONLY);
+            CVarDef.Create("atmos.space_wind", true, CVar.SERVERONLY);
 
         /// <summary>
         ///     Divisor from maxForce (pressureDifference * 2.25f) to force applied on objects.
@@ -1003,7 +1097,7 @@ namespace Content.Shared.CCVar
         ///     Useful to prevent clipping through objects.
         /// </summary>
         public static readonly CVarDef<float> SpaceWindMaxVelocity =
-            CVarDef.Create("atmos.space_wind_max_velocity", 30f, CVar.SERVERONLY);
+            CVarDef.Create("atmos.space_wind_max_velocity", 15f, CVar.SERVERONLY);
 
         /// <summary>
         ///     The maximum force that may be applied to an object by pushing (i.e. not throwing) atmospheric pressure differences.
@@ -1011,6 +1105,32 @@ namespace Content.Shared.CCVar
         /// </summary>
         public static readonly CVarDef<float> SpaceWindMaxPushForce =
             CVarDef.Create("atmos.space_wind_max_push_force", 20f, CVar.SERVERONLY);
+
+        /// <summary>
+        ///     If an object's mass is below this number, then this number is used in place of mass to determine whether air pressure can throw an object.
+        ///     This has nothing to do with throwing force, only acting as a way of reducing the odds of tiny 5 gram objects from being yeeted by people's breath
+        /// </summary>
+        /// <remarks>
+        ///     If you are reading this because you want to change it, consider looking into why almost every item in the game weighs only 5 grams
+        ///     And maybe do your part to fix that? :)
+        /// </remarks>
+        public static readonly CVarDef<float> SpaceWindMinimumCalculatedMass =
+            CVarDef.Create("atmos.space_wind_minimum_calculated_mass", 10f, CVar.SERVERONLY);
+
+        /// <summary>
+        /// Calculated as 1/Mass, where Mass is the physics.Mass of the desired threshold.
+        /// If an object's inverse mass is lower than this, it is capped at this. Basically, an upper limit to how heavy an object can be
+        /// before it stops resisting space wind more.
+        /// </summary>
+        public static readonly CVarDef<float> SpaceWindMaximumCalculatedInverseMass =
+            CVarDef.Create("atmos.space_wind_maximum_calculated_inverse_mass", 0.0125f, CVar.SERVERONLY);
+
+        /// <summary>
+        /// Increases default airflow calculations to O(n^2) complexity, for use with heavy space wind optimizations. Potato servers BEWARE
+        /// This solves the problem of objects being trapped in an infinite loop of slamming into a wall repeatedly.
+        /// </summary>
+        public static readonly CVarDef<bool> MonstermosUseExpensiveAirflow =
+            CVarDef.Create("atmos.mmos_expensive_airflow", true, CVar.SERVERONLY);
 
         /// <summary>
         ///     Whether monstermos tile equalization is enabled.
@@ -1033,7 +1153,21 @@ namespace Content.Shared.CCVar
 		///     Also looks weird on slow spacing for unrelated reasons. If you do want to enable this, you should probably turn on instaspacing.
         /// </summary>
         public static readonly CVarDef<bool> MonstermosRipTiles =
-            CVarDef.Create("atmos.monstermos_rip_tiles", false, CVar.SERVERONLY);
+            CVarDef.Create("atmos.monstermos_rip_tiles", true, CVar.SERVERONLY);
+
+        /// <summary>
+        ///     Taken as the cube of a tile's mass, this acts as a minimum threshold of mass for which air pressure calculates whether or not to rip a tile from the floor
+        ///     This should be set by default to the cube of the game's lowest mass tile as defined in .yml prototypes, but can be increased for server performance reasons
+        /// </summary>
+        public static readonly CVarDef<float> MonstermosRipTilesMinimumPressure =
+            CVarDef.Create("atmos.monstermos_rip_tiles_min_pressure", 7500f, CVar.SERVERONLY);
+
+        /// <summary>
+        ///     Taken after the minimum pressure is checked, the effective pressure is multiplied by this amount. This allows server hosts to
+        ///     finely tune how likely floor tiles are to be ripped apart by air pressure
+        /// </summary>
+        public static readonly CVarDef<float> MonstermosRipTilesPressureOffset =
+            CVarDef.Create("atmos.monstermos_rip_tiles_pressure_offset", 0.44f, CVar.SERVERONLY);
 
         /// <summary>
         ///     Whether explosive depressurization will cause the grid to gain an impulse.
@@ -1251,7 +1385,7 @@ namespace Content.Shared.CCVar
         ///     Config for when the restart vote should be allowed to be called based on percentage of ghosts.
         ///
         public static readonly CVarDef<int> VoteRestartGhostPercentage =
-            CVarDef.Create("vote.restart_ghost_percentage", 75, CVar.SERVERONLY);
+            CVarDef.Create("vote.restart_ghost_percentage", 55, CVar.SERVERONLY);
 
         /// <summary>
         ///     See vote.enabled, but specific to preset votes
@@ -1369,6 +1503,18 @@ namespace Content.Shared.CCVar
         /// </summary>
         public static readonly CVarDef<bool> ArrivalsReturns =
             CVarDef.Create("shuttle.arrivals_returns", false, CVar.SERVERONLY);
+
+        /// <summary>
+        /// Should all players be forced to spawn at departures, even on roundstart, even if their loadout says they spawn in cryo?
+        /// </summary>
+        public static readonly CVarDef<bool> ForceArrivals =
+            CVarDef.Create("shuttle.force_arrivals", false, CVar.SERVERONLY);
+
+        /// <summary>
+        /// Should all players who spawn at arrivals have godmode until they leave the map?
+        /// </summary>
+        public static readonly CVarDef<bool> GodmodeArrivals =
+            CVarDef.Create("shuttle.godmode_arrivals", false, CVar.SERVERONLY);
 
         /// <summary>
         /// Whether to automatically spawn escape shuttles.
@@ -1869,6 +2015,12 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<float> GhostRoleTime =
             CVarDef.Create("ghost.role_time", 3f, CVar.REPLICATED | CVar.SERVER);
 
+        /// <summary>
+        /// Whether or not to kill the player's mob on ghosting, when it is in a critical health state.
+        /// </summary>
+        public static readonly CVarDef<bool> GhostKillCrit =
+            CVarDef.Create("ghost.kill_crit", true, CVar.REPLICATED | CVar.SERVER);
+
         /*
          * Fire alarm
          */
@@ -2056,5 +2208,11 @@ namespace Content.Shared.CCVar
         /// </summary>
         public static readonly CVarDef<bool> DebugOptionVisualizerTest =
             CVarDef.Create("debug.option_visualizer_test", false, CVar.CLIENTONLY);
+
+        /// <summary>
+        /// Set to true to disable parallel processing in the pow3r solver.
+        /// </summary>
+        public static readonly CVarDef<bool> DebugPow3rDisableParallel =
+            CVarDef.Create("debug.pow3r_disable_parallel", true, CVar.SERVERONLY);
     }
 }

@@ -92,7 +92,7 @@ uplink-speedloader-magnum-name = Speedloader (.45 magnum AP)
 uplink-speedloader-magnu-desc = Revolver speedloader with 6 armor-piercing catridges, capable of ignoring armor entirely. Compatible with the Python.
 
 uplink-mosin-ammo-name = Ammunition box (.30 rifle)
-uplink-mosin-ammo-desc = A box of 50 cartridges for the surplus rifle.
+uplink-mosin-ammo-desc = A box of 60 cartridges for the surplus rifle.
 
 uplink-sniper-ammo-name = Ammunition box (.60 antimateriel)
 uplink-sniper-ammo-desc = A box of 10 cartridges for the Hristov sniper rifle.
@@ -235,10 +235,10 @@ uplink-zombie-bundle-name = Syndicate Zombie Bundle
 uplink-zombie-bundle-desc = An all-in-one kit for unleashing the undead upon a station.
 
 uplink-surplus-bundle-name = Surplus Crate
-uplink-surplus-bundle-desc = Contains 50 telecrystals worth of completely random Syndicate items. It can be useless junk or really good.
+uplink-surplus-bundle-desc = Contains 250 telecrystals worth of completely random Syndicate items. It can be useless junk or really good.
 
 uplink-super-surplus-bundle-name = Super Surplus Crate
-uplink-super-surplus-bundle-desc = Contains 125 telecrystals worth of completely random Syndicate items.
+uplink-super-surplus-bundle-desc = Contains 625 telecrystals worth of completely random Syndicate items.
 
 # Tools
 uplink-toolbox-name = Toolbox
@@ -290,9 +290,6 @@ uplink-disposable-turret-desc = Looks and functions like a normal electrical too
 uplink-cluster-banana-peel-name = Cluster Banana
 uplink-cluster-banana-peel-desc = Splits into 6 explosive banana peels after being thrown, the peels detonate automatically after 20 seconds if nobody slips on them.
 
-uplink-pie-cannon-name = Regenerating Pie Cannon
-uplink-pie-cannon-desc = Regenerates banana cream pies. Aim your crosshair onto the target, not in their general direction.
-
 uplink-cane-blade-name = Cane Blade
 uplink-cane-blade-desc = A cane that has a hidden blade that can be unsheathed.
 
@@ -314,6 +311,9 @@ uplink-clothing-shoes-boots-mag-syndie-desc = A pair of boots that prevent slipp
 
 uplink-eva-syndie-name = Syndicate EVA Bundle
 uplink-eva-syndie-desc = A simple EVA suit that offers no protection other than what's needed to survive in space.
+
+uplink-hardsuit-carp-name = Carp Hardsuit
+uplink-hardsuit-carp-desc = Looks like an ordinary carp suit, except fully spaceproof and tricks space carp into thinking you are one of them.
 
 uplink-hardsuit-syndie-name = Syndicate Hardsuit
 uplink-hardsuit-syndie-desc = The Syndicate's well known armored blood red hardsuit, capable of space walks and bullet resistant.
@@ -346,9 +346,6 @@ uplink-eshield-desc = Exotic energy shield that reflects almost all laser beams,
 uplink-soap-name = Soap
 uplink-soap-desc = An untrustworthy bar of soap. Smells of fear.
 
-uplink-gondola-name = Gondola Crate
-uplink-gondola-desc = Crate containing one standard issue gondola.
-
 uplink-ultrabright-lantern-name = Extra-Bright Lantern
 uplink-ultrabright-lantern-desc = It can be used to blind people like a flash.
 
@@ -361,11 +358,11 @@ uplink-combat-medipen-desc = A single-use medipen containing chemicals that rege
 uplink-nocturine-chemistry-bottle-name = Nocturine Bottle
 uplink-nocturine-chemistry-bottle-desc = A chemical that makes it very hard for your target to stand up.
 
-uplink-stimpack-name = Stimpack
+uplink-stimpack-name = Hyperzine Injector
 uplink-stimpack-desc = The legendary chemical produced by Donk Co. for the Syndicate. Injecting yourself with this will increase your run speed and let you recover from stuns faster for 30 seconds.
 
-uplink-stimkit-name = Stimkit
-uplink-stimkit-desc = A medkit containing 6 stimulant microinjectors, which each inject you with enough stimulants to last for 15 seconds.
+uplink-stimkit-name = Hyperzine Injector Kit
+uplink-stimkit-desc = A medkit containing 6 hyperzine microinjectors, which each inject you with enough hyperzine to last for 15 seconds.
 
 uplink-syndicate-segway-crate-name = Syndicate Segway
 uplink-syndicate-segway-crate-desc = Be an enemy of the corporation, in style!
@@ -376,8 +373,8 @@ uplink-syndicate-sponge-box-desc = A box containing 6 syndicate sponges disguise
 uplink-slipocalypse-clustersoap-name = Slipocalypse Clustersoap
 uplink-slipocalypse-clustersoap-desc = Scatters arounds small pieces of syndicate-brand soap after being thrown, these pieces of soap evaporate after 60 seconds.
 
-uplink-mobcat-microbomb-name = SyndiCat
-uplink-mobcat-microbomb-desc = A hand cat equipped with a microbomb implant. Explodes when seriously injured. Can bite painfully
+uplink-mobcat-microbomb-name = SyndiCat Teleporter
+uplink-mobcat-microbomb-desc = Call in a handy cat equipped with a microbomb implant. Explodes when seriously injured. Can bite painfully.
 
 uplink-chameleon-projector-name = Chameleon Projector
 uplink-chameleon-projector-desc = Disappear in plain sight by creating a hologram of an item around you. Do not use this to play the game "Object Search".
@@ -434,11 +431,5 @@ uplink-hypodart-desc = A seemingly unremarkable dart with an enlarged reservoir 
 uplink-barber-scissors-name = Barber Scissors
 uplink-barber-scissors-desc = A good tool to give your fellow agent a nice haircut, unless you want to give it to yourself.
 
-uplink-throngler-name = The Throngler
-uplink-throngler-desc = You're never gonna get it. You're never gonna get it. Please don't get it...
-
 uplink-backpack-syndicate-name = Syndicate backpack
 uplink-backpack-syndicate-desc = Lightweight explosion-proof а backpack for holding various traitor goods
-
-uplink-warhorn-name = Syndicate Warhorn
-uplink-warhorn-desc = A tool that releases an intimidating sound, great for letting the station know you're nearby.

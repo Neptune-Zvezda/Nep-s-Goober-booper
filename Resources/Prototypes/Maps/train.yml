@@ -1,15 +1,15 @@
 - type: gameMap
   id: Train
-  mapName: 'Train'
+  mapName: 'Why would you fucking want this map at all?'
   mapPath: /Maps/train.yml
-  minPlayers: 100
-  maxPlayers: 100
+  maxRandomOffset: 0
+  randomRotation: false
+  minPlayers: 10
+  maxPlayers: 50
   stations:
     Train:
       stationProto: StandardNanotrasenStation
       components:
-        - type: StationRandomTransform
-          enableStationRotation: false
         - type: StationNameSetup
           mapNameTemplate: 'Train "Sentipode" {0}-{1}'
           nameGenerator:
@@ -18,13 +18,11 @@
         - type: StationEmergencyShuttle
           emergencyShuttlePath: /Maps/Shuttles/emergency_omega.yml # To do - add railway station
         - type: StationJobs
-          overflowJobs:
-            - Passenger
           availableJobs:
             #service
             Captain: [ 1, 1 ]
-            BlueshieldOfficer: [ 1, 1 ]
             NanotrasenRepresentative: [ 1, 1 ]
+            BlueshieldOfficer: [ 1, 1 ]
             HeadOfPersonnel: [ 1, 1 ]
             Bartender: [ 1, 1 ]
             Botanist: [ 2, 2 ]

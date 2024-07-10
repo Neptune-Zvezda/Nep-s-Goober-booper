@@ -3,6 +3,7 @@
   startingInventory:
     BKKitsuneMask: 2
     BKTurtleSkirt: 2
+# Goobstation Blackburn outfit
     ClothingHeadHatJester: 1
     ClothingUniformJumpsuitJester: 1
     ClothingHeadHatJesterAlt: 1
@@ -31,6 +32,8 @@
     ClothingHeadHatShrineMaidenWig: 2
     ClothingOuterSuitShrineMaiden: 2
     Gohei: 2
+    ClothingOuterSuitWitchRobes: 2
+    ClothingHeadHatWitch1: 2
     ClothingHeadHatRedRacoon: 2
     ClothingOuterRedRacoon: 2
     ClothingHeadPaperSack: 2

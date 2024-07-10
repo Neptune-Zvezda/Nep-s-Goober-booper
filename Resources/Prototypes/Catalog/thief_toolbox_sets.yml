@@ -61,7 +61,8 @@
   - SyndicatePersonalAI
   - ClothingHeadHatSyndieMAA
   - CigPackSyndicate
-  - Telecrystal10 #The thief cannot use them, but it may induce communication with traitors
+   # Goobstation - Telecrystal rework
+  - Telecrystal50 # The thief cannot use them, but it may induce communication with traitors
 
 - type: thiefBackpackSet
   id: SleeperSet
@@ -104,6 +105,7 @@
   content:
   - InvisibleCrate
   - ClothingNeckCloakVoid
+# Goobstation Sock Stuff haha thief go brrrr
   - ClothingUnderSocksStripedVoidGreen
   - FultonBeacon
   - Fulton

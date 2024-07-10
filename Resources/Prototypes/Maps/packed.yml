@@ -3,7 +3,7 @@
   mapName: 'Packed'
   mapPath: /Maps/packed.yml
   minPlayers: 0
-  maxPlayers: 100
+  maxPlayers: 85 # Goobstation - Limit mappool to highpop versions of maps only
   stations:
     Packed:
       stationProto: StandardNanotrasenStation
@@ -14,8 +14,6 @@
             !type:NanotrasenNameGenerator
             prefixCreator: 'VG'
         - type: StationJobs
-          overflowJobs:
-            - Passenger
           availableJobs:
             #service
             Captain: [ 1, 1 ]

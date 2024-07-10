@@ -13,6 +13,8 @@
        - id: ClothingShoesColorBlack
          amount: 2
        - id: ClothingMaskMuzzle
+# Goobstation Sock Stuff
+       - id: ClothingUnderSocksStripedMime
 
 #- type: entity
 #  id: WardrobePajamaFilled
@@ -36,6 +38,7 @@
        amount: 2
      - id: ClothingHandsGlovesFingerless
        amount: 2
+# Goobstation Sock Stuff
      - id: ClothingUnderSocksStripedScience
 
  - type: entity
@@ -51,6 +54,7 @@
        - id: ClothingShoesColorWhite
        - id: ClothingOuterCoatLabChem
        - id: ClothingUniformJumpskirtChemistry
+# Goobstation Sock Stuff
        - id: ClothingUnderSocksStripedWhiteandOrange
 
  - type: entity
@@ -66,8 +70,8 @@
        - id: ClothingShoesColorWhite
        - id: ClothingOuterCoatLabGene
        - id: ClothingUniformJumpskirtGenetics
+# Goobstation Sock Stuff
        - id: ClothingUnderSocksStripedWhiteandLightBlue
-
 
  - type: entity
    id: WardrobeVirologyFilled
@@ -101,9 +105,8 @@
          prob: 0.5
        - id: CrowbarRed #The jojoke - hit video game Half-Life
          prob: 0.1
+# Goobstation Sock Stuff
        - id: ClothingUnderSocksStripedScience
-
-
 
  - type: entity
    id: WardrobeBotanistFilled
@@ -123,7 +126,8 @@
          prob: 0.15
        - id: ClothingHandsGlovesLeather
          prob: 0.5
-       - id: ClothingUnderSocksStripedWhiteandGreen
+# Goobstation Sock Stuff
+       - id: ClothingUnderSocksStripedBotany
 
  - type: entity
    id: WardrobeMedicalDoctorFilled
@@ -142,6 +146,7 @@
          prob: 0.4
        - id: ClothingEyesGlasses
          prob: 0.3
+# Goobstation Sock Stuff
        - id: ClothingUnderSocksStripedWhiteandLightBlue
 
  - type: entity
@@ -155,6 +160,8 @@
        - id: ClothingUniformJumpsuitChaplain
        - id: ClothingShoesColorBlack
        - id: ClothingUniformJumpskirtChaplain
+# Goobstation Sock Stuff
+       - id: ClothingUnderSocksStripedGreyDark
 
  - type: entity
    id: WardrobeSecurityFilled
@@ -171,6 +178,7 @@
        - id: ClothingHeadHelmetBasic
        - id: ClothingOuterArmorBasic
        - id: ClothingUniformJumpskirtSec
+# Goobstation Sock Stuff
        - id: ClothingUnderSocksStripedSecurityJackboots
          orGroup: StripedSocks
          prob: 0.50
@@ -193,6 +201,7 @@
        - id: ClothingUniformJumpskirtCargo
        - id: ClothingHandsGlovesFingerless
        - id: AppraisalTool
+# Goobstation Sock Stuff
        - id: ClothingUnderSocksStripedCargo
 
  - type: entity
@@ -207,6 +216,7 @@
          amount: 2
        - id: ClothingUniformJumpsuitSalvageSpecialist
          amount: 2
+# Goobstation Sock Stuff
        - id: ClothingUnderSocksStripedCargo
 
  - type: entity
@@ -221,6 +231,7 @@
        - id: ClothingBackpackEngineering
        - id: ClothingShoesColorWhite
        - id: ClothingUniformJumpskirtAtmos
+# Goobstation Sock Stuff
        - id: ClothingUnderSocksStripedEngineeringAtmos
 
  - type: entity
@@ -237,4 +248,5 @@
        - id: ClothingShoesBootsWork
        - id: ClothingOuterVestHazard
        - id: ClothingUniformJumpskirtEngineering
+# Goobstation Sock Stuff
        - id: ClothingUnderSocksStripedEngineering

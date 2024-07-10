@@ -28,9 +28,6 @@
   id: ATVKeys
 
 - type: Tag
-  id: Baguette
-
-- type: Tag
   id: Balloon
 
 - type: Tag
@@ -259,6 +256,12 @@
   id: CableCoil
 
 - type: Tag
+  id: Candle
+
+- type: Tag
+  id: Cake
+
+- type: Tag
   id: CaneBlade
 
 - type: Tag
@@ -325,9 +328,6 @@
   id: CartridgeAntiMateriel
 
 - type: Tag
-  id: CartridgeMortis
-
-- type: Tag
   id: CartridgeCap
 
 - type: Tag
@@ -363,6 +363,10 @@
 
 - type: Tag
   id: Chicken
+
+# Allowed to control someone wearing a Chef's hat if inside their hat.
+- type: Tag
+  id: ChefPilot
 
 - type: Tag
   id: ChemDispensable # container that can go into the chem dispenser
@@ -560,9 +564,6 @@
   id: Enzyme
 
 - type: Tag
-  id: EnrichedUranium
-
-- type: Tag
   id: ExplosivePassable
 
 - type: Tag
@@ -627,9 +628,6 @@
 
 - type: Tag
   id: GeigerCounter
-  
-- type: Tag
-  id: GhostFeet  # Neptune + others, set ghost socks here
 
 - type: Tag
   id: GlassAirlock
@@ -906,9 +904,6 @@
   id: Mineshaft
 
 - type: Tag
-  id: Minibomb
-
-- type: Tag
   id: ModularReceiver
 
 - type: Tag
@@ -937,6 +932,9 @@
 
 - type: Tag
   id: NozzleBackTank
+
+- type: Tag
+  id: Nugget # for chicken nuggets
 
 - type: Tag
   id: NukeOpsUplink
@@ -1117,9 +1115,6 @@
   id: ShellShotgun
 
 - type: Tag
-  id: ShellShotgunUranium
-
-- type: Tag
   id: Shiv
 
 - type: Tag
@@ -1138,6 +1133,9 @@
   id: Skewer
 
 - type: Tag
+  id: Slice # sliced fruit, vegetables, pizza etc.
+
+- type: Tag
   id: SmallAIChip
 
 - type: Tag
@@ -1145,6 +1143,8 @@
 
 - type: Tag
   id: Smokable
+
+
 
 - type: Tag
   id: SnowyLabs
@@ -1174,9 +1174,6 @@
 
 - type: Tag
   id: SpiderCraft
-
-- type: Tag
-  id: WizardNonApprentice
 
 - type: Tag
   id: SpookyFog
@@ -1297,9 +1294,6 @@
 
 - type: Tag
   id: WeaponPistolCHIMPUpgradeKit
-
-- type: Tag
-  id: WeaponShotgunImprovised
 
 - type: Tag
   id: WeaponShotgunKammerer

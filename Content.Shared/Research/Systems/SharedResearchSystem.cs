@@ -1,4 +1,4 @@
-using System.Linq;
+﻿using System.Linq;
 using Content.Shared.Research.Components;
 using Content.Shared.Research.Prototypes;
 using JetBrains.Annotations;
@@ -134,10 +134,10 @@ public abstract class SharedResearchSystem : EntitySystem
             if (percent < techDiscipline.TierPrerequisites[tier])
                 break;
 
-           /* if (tier >= techDiscipline.LockoutTier &&
+            if (tier >= techDiscipline.LockoutTier &&
                 component.MainDiscipline != null &&
                 techDiscipline.ID != component.MainDiscipline)
-                break;*/
+                break;
             tier++;
         }
 
@@ -279,5 +279,24 @@ public abstract class SharedResearchSystem : EntitySystem
 
         comp.UnlockedTechnologies.Clear();
         Dirty(uid, comp);
+    }
+
+    /// <summary>
+    /// Adds a lathe recipe to the specified technology database
+    /// without checking if it can be unlocked.
+    /// </summary>
+    public void AddLatheRecipe(EntityUid uid, string recipe, TechnologyDatabaseComponent? component = null)
+    {
+        if (!Resolve(uid, ref component))
+            return;
+
+        if (component.UnlockedRecipes.Contains(recipe))
+            return;
+
+        component.UnlockedRecipes.Add(recipe);
+        Dirty(uid, component);
+
+        var ev = new TechnologyDatabaseModifiedEvent();
+        RaiseLocalEvent(uid, ref ev);
     }
 }
