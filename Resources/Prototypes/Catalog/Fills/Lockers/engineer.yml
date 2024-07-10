@@ -97,7 +97,10 @@
       - id: DoorRemoteFirefight # Goobstation - re adding fire door remote
       - id: RCD
       - id: RCDAmmo
+<<<<<<< Updated upstream
 # Goobstation Sock Stuff
+=======
+>>>>>>> Stashed changes
       - id: ClothingUnderSocksStripedEngineeringAtmos
 
 - type: entity
@@ -116,7 +119,10 @@
       - id: DoorRemoteFirefight # Goobstation - re adding fire door remote
       - id: RCD
       - id: RCDAmmo
+<<<<<<< Updated upstream
 # Goobstation Sock Stuff
+=======
+>>>>>>> Stashed changes
       - id: ClothingUnderSocksStripedEngineeringAtmos
 
 - type: entity
@@ -145,7 +151,10 @@
       - id: trayScanner
       - id: RCD
       - id: RCDAmmo
+<<<<<<< Updated upstream
 # Goobstation Sock Stuff
+=======
+>>>>>>> Stashed changes
       - id: ClothingUnderSocksStripedEngineering
 
 - type: entity

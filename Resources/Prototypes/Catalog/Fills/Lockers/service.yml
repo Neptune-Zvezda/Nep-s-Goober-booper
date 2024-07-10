@@ -21,7 +21,10 @@
         amount: 2
       - id: RagItem
         amount: 2
+<<<<<<< Updated upstream
 # Goobstation Sock Stuff
+=======
+>>>>>>> Stashed changes
       - id: ClothingUnderSocksStripedGreyDark
 
 #- type: entity
@@ -54,7 +57,10 @@
       - id: DrinkMilkCarton
         amount: 2
       - id: DrinkSoyMilkCarton
+<<<<<<< Updated upstream
 # Goobstation Sock Stuff Yes its weird its in a locker fridge hecc you
+=======
+>>>>>>> Stashed changes
       - id: ClothingUnderSocksStripedGrey
 
 - type: entity
@@ -92,7 +98,10 @@
       - id: BriefcaseBrownFilled
         prob: 0.80
       - id: ClothingOuterRobesJudge
+<<<<<<< Updated upstream
 # Goobstation Sock Stuff
+=======
+>>>>>>> Stashed changes
       - id: ClothingUnderSocksStripedGreyDark
 
 - type: entity
@@ -115,7 +124,10 @@
       - id: ClothingUniformOveralls
       - id: ClothingHeadHatTrucker
         prob: 0.1
+<<<<<<< Updated upstream
 # Goobstation Sock Stuff
+=======
+>>>>>>> Stashed changes
       - id: ClothingUnderSocksStripedBotany
 
 - type: entity

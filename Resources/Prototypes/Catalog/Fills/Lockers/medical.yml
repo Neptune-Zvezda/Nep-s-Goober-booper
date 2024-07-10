@@ -70,7 +70,10 @@
         prob: 0.05
         orGroup: Surgshrubs
       - id: ClothingMaskSterile
+<<<<<<< Updated upstream
 # Goobstation Sock Stuff
+=======
+>>>>>>> Stashed changes
       - id: ClothingUnderSocksStripedWhiteandLightBlue
 
 - type: entity
@@ -106,7 +109,10 @@
         prob: 0.05
         orGroup: Surgshrubs
       - id: ClothingMaskSterile
+<<<<<<< Updated upstream
 # Goobstation Sock Stuff
+=======
+>>>>>>> Stashed changes
       - id: ClothingUnderSocksStripedWhiteandLightBlue
 
 - type: entity
@@ -150,5 +156,8 @@
       - id: HandheldGPSBasic
       - id: MedkitFilled
         prob: 0.3
+<<<<<<< Updated upstream
 # Goobstation Sock Stuff
+=======
+>>>>>>> Stashed changes
       - id: ClothingUnderSocksStripedWhiteandLightBlue

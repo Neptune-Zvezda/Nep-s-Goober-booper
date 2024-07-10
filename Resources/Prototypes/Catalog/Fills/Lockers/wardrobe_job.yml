@@ -13,7 +13,10 @@
        - id: ClothingShoesColorBlack
          amount: 2
        - id: ClothingMaskMuzzle
+<<<<<<< Updated upstream
 # Goobstation Sock Stuff
+=======
+>>>>>>> Stashed changes
        - id: ClothingUnderSocksStripedMime
 
 #- type: entity
@@ -126,7 +129,10 @@
          prob: 0.15
        - id: ClothingHandsGlovesLeather
          prob: 0.5
+<<<<<<< Updated upstream
 # Goobstation Sock Stuff
+=======
+>>>>>>> Stashed changes
        - id: ClothingUnderSocksStripedBotany
 
  - type: entity
@@ -160,7 +166,10 @@
        - id: ClothingUniformJumpsuitChaplain
        - id: ClothingShoesColorBlack
        - id: ClothingUniformJumpskirtChaplain
+<<<<<<< Updated upstream
 # Goobstation Sock Stuff
+=======
+>>>>>>> Stashed changes
        - id: ClothingUnderSocksStripedGreyDark
 
  - type: entity
