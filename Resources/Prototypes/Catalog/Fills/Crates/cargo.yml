@@ -113,6 +113,9 @@
     - id: WeaponLauncherPirateCannon
       prob: 0.001
       orGroup: Weapons
+    - id: FoamThrongler
+      prob: 0.0001
+      orGroup: Weapons
     - id: WeaponPistolCHIMP
       prob: 0.001
       orGroup: Weapons
@@ -304,6 +307,9 @@
       orGroup: Plushies
     - id: PlushieArachind
       prob: 0.01
+      orGroup: Plushies
+    - id: PlushieThrongler #hehe
+      prob: 0.0005
       orGroup: Plushies
     #useful
     - id: AmeJar

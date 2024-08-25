@@ -7,20 +7,11 @@
     contents:
       - id: ClothingHeadHatCaptain
       - id: ClothingHeadHatCapcap
-      - id: ClothingNeckCloakCap
-      - id: ClothingNeckCloakCapFormal
       - id: ClothingUniformJumpsuitCapFormal
       - id: ClothingUniformJumpskirtCapFormalDress
       - id: ClothingHandsGlovesCaptain
-      - id: ClothingNeckMantleCap
       - id: ClothingOuterWinterCap
-# Goobstation Sock Stuff
-      - id: ClothingUnderSocksStripedCaptainBlueandGold
-        orGroup: StripedSocks
-        prob: 0.50
-      - id: ClothingUnderSocksStripedCaptainGoldandBlue
-        orGroup: StripedSocks
-        prob: 0.50
+      - id: ClothingNeckCloakCap
 
 - type: entity
   id: DresserChiefEngineerFilled
@@ -29,14 +20,11 @@
   components:
   - type: StorageFill
     contents:
-      - id: ClothingNeckMantleCE
       - id: ClothingUniformJumpsuitChiefEngineerTurtle
       - id: ClothingUniformJumpskirtChiefEngineerTurtle
-      - id: ClothingNeckCloakCe
       - id: ClothingHeadHatBeretEngineering
       - id: ClothingOuterWinterCE
-# Goobstation Sock Stuff
-      - id: ClothingUnderSocksStripedEngineeringCE
+      - id: ClothingNeckCloakCe
 
 - type: entity
   id: DresserChiefMedicalOfficerFilled
@@ -45,8 +33,6 @@
   components:
   - type: StorageFill
     contents:
-      - id: ClothingNeckMantleCMO
-      - id: ClothingCloakCmo
       - id: ClothingOuterCoatLabCmo
       - id: ClothingUniformJumpsuitCMOTurtle
       - id: ClothingUniformJumpskirtCMOTurtle
@@ -54,8 +40,7 @@
       - id: ClothingHeadMirror
       - id: ClothingEyesGlasses
       - id: ClothingOuterWinterCMO
-# Goobstation Sock Stuff
-      - id: ClothingUnderSocksStripedWhiteandLightBlueBunnySlipper
+      - id: ClothingCloakCmo
 
 - type: entity
   id: DresserHeadOfPersonnelFilled
@@ -64,13 +49,10 @@
   components:
   - type: StorageFill
     contents:
-      - id: ClothingNeckMantleHOP
-      - id: ClothingNeckCloakHop
       - id: ClothingHeadHatHopcap
       - id: ClothingOuterWinterHoP
       - id: ClothingEyesGlasses
-# Goobstation Sock Stuff
-      - id: ClothingUnderSocksStripedCaptainBlueandWhite
+      - id: ClothingNeckCloakHop
 
 - type: entity
   id: DresserHeadOfSecurityFilled
@@ -79,24 +61,14 @@
   components:
   - type: StorageFill
     contents:
-      - id: ClothingNeckMantleHOS
       - id: ClothingHeadHatBeretHoS
       - id: ClothingHeadHatHoshat
-      - id: ClothingNeckCloakHos
-# Disabled because accessable from both lathe and loadouts, makes more consistant with other dressers
-#      - id: ClothingUniformJumpskirtHoSAlt
-#      - id: ClothingUniformJumpsuitHoSAlt
+      - id: ClothingUniformJumpskirtHoSAlt
+      - id: ClothingUniformJumpsuitHoSAlt
       - id: ClothingUniformJumpskirtHosFormal
       - id: ClothingUniformJumpsuitHosFormal
       - id: ClothingOuterWinterHoS
-# Goobstation Sock Stuff
-      - id: ClothingUnderSocksStripedSecurityHos
-#        orGroup: StripedSocks
-        prob: 0.20
-      - id: ClothingUnderSocksStripedSecurityHosJackboot
-        orGroup: StrippedSocks
-        prob: 0.80
-
+      - id: ClothingNeckCloakHos
 
 - type: entity
   id: DresserQuarterMasterFilled
@@ -105,16 +77,13 @@
   components:
   - type: StorageFill
     contents:
-      - id: ClothingNeckCloakQm
       - id: ClothingHeadHatBeretQM
       - id: ClothingUniformJumpsuitQMFormal
       - id: ClothingUniformJumpsuitQMTurtleneck
       - id: ClothingUniformJumpskirtQMTurtleneck
       - id: ClothingHandsGlovesColorBrown
-      - id: ClothingNeckMantleQM
       - id: ClothingOuterWinterQM
-# Goobstation Sock Stuff
-      - id: ClothingUnderSocksStripedCargoQm
+      - id: ClothingNeckCloakQm
 
 - type: entity
   id: DresserResearchDirectorFilled
@@ -123,14 +92,12 @@
   components:
   - type: StorageFill
     contents:
-      - id: ClothingNeckMantleRD
-      - id: ClothingNeckCloakRd
       - id: ClothingHeadHatBeretRND
       - id: ClothingHandsGlovesColorPurple
       - id: ClothingEyesGlasses
       - id: ClothingOuterWinterRD
-# Goobstation Sock Stuff
-      - id: ClothingUnderSocksStripedScienceRD
+      - id: ClothingOuterCoatRD
+      - id: ClothingNeckCloakRd
 
 - type: entity
   id: DresserWardenFilled
@@ -141,10 +108,3 @@
     contents:
       - id: ClothingHeadHatWarden
       - id: ClothingHeadHatBeretWarden
-# Goobstation Sock Stuff
-      - id: ClothingUnderSocksStripedSecurityHosJackboot
-        orGroup: StripedSocks
-        prob: 0.30
-      - id: ClothingUnderSocksStripedSecurityHos
-        orGroup: StripedSocks
-        prob: 0.70
