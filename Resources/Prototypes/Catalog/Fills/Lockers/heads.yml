@@ -9,6 +9,7 @@
     - id: CargoSaleComputerCircuitboard
     - id: CargoShuttleComputerCircuitboard
     - id: CargoShuttleConsoleCircuitboard
+    - id: SalvageMagnetMachineCircuitboard
     - id: CigPackGreen
       prob: 0.50
     - id: ClothingHeadsetAltCargo
@@ -17,6 +18,7 @@
     - id: RubberStampDenied
     - id: RubberStampQm
     - id: SalvageShuttleConsoleCircuitboard
+    - id: AstroNavCartridge
 
 - type: entity
   id: LockerQuarterMasterFilled
@@ -49,6 +51,7 @@
     - id: RubberStampCaptain
     - id: SpaceCash1000
     - id: WeaponDisabler
+    - id: ClothingEyesGlassesCommand
 
 # No laser table + Laser table
 - type: entityTable
@@ -131,6 +134,7 @@
     - id: RubberStampDenied
     - id: RubberStampHop
     - id: WeaponDisabler
+    - id: ClothingEyesHudCommand
 
 - type: entity
   id: LockerHeadOfPersonnelFilled
@@ -159,7 +163,7 @@
     - id: RCD
     - id: RCDAmmo
     - id: RubberStampCE
-
+    - id: BaseHandheldStationMapPowerCe
 # Hardsuit table, used for suit storage as well
 - type: entityTable
   id: FillChiefEngineerHardsuit
@@ -221,6 +225,7 @@
     - id: MedicalScannerMachineCircuitboard
     - id: CloningConsoleComputerCircuitboard
     - id: BiomassReclaimerMachineCircuitboard
+    - id: MedTekCartridge
 
 # Hardsuit table, used for suit storage as well
 - type: entityTable
@@ -267,7 +272,6 @@
     - id: ClothingBeltUtilityFilled
     - id: ClothingHeadsetAltScience
     - id: DoorRemoteResearch
-    - id: EncryptionKeyBinary
     - id: HandTeleporter
     - id: ProtolatheMachineCircuitboard
     - id: ResearchComputerCircuitboard
@@ -316,7 +320,8 @@
   id: LockerFillHeadOfSecurityNoHardsuit
   table: !type:AllSelector
     children:
-    - id: WeaponEnergyShotgun
+#    - id: WeaponEnergyShotgun
+    - id: WeaponEnergyGunMultiphase # Goobstation, replace energy shotgun with the X-01 Multiphase.
     - id: BookSpaceLaw
     - id: BoxEncryptionKeySecurity
     - id: CigarGoldCase
@@ -332,7 +337,7 @@
     - id: RubberStampHos
     - id: SecurityTechFabCircuitboard
     - id: WeaponDisabler
-
+    - id: WantedListCartridge
 # Hardsuit table, used for suit storage as well
 - type: entityTable
   id: FillHeadOfSecurityHardsuit
