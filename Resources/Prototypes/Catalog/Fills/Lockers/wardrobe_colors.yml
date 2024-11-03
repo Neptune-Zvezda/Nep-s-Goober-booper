@@ -16,7 +16,10 @@
         prob: 0.5
       - id: ClothingOuterCoatBomber
         prob: 0.3
+<<<<<<< Updated upstream
 # Goobstation Sock Stuff
+=======
+>>>>>>> Stashed changes
       - id: ClothingUnderSocksStripedGrey
 
 - type: entity
@@ -59,7 +62,10 @@
       - id: ClothingShoesColorOrange
         amount: 2
       - id: ClothingHeadBandGold
+<<<<<<< Updated upstream
 # Goobstation Sock Stuff
+=======
+>>>>>>> Stashed changes
       - id: ClothingUnderSocksStripedWhiteandYellow
 
 - type: entity
@@ -74,7 +80,10 @@
       - id: ClothingShoesColorWhite
         amount: 2
       - id: ClothingHeadHatMimesoft
+<<<<<<< Updated upstream
 # Goobstation Sock Stuff The forbiden sock
+=======
+>>>>>>> Stashed changes
       - id: ClothingUnderSocksBase
 
 - type: entity
@@ -88,6 +97,7 @@
       - id: ClothingUniformJumpskirtColorBlue
       - id: ClothingShoesColorBlue
         amount: 2
+      - id: ClothingUnderSocksStripedSherbert
 
 - type: entity
   id: WardrobePinkFilled
@@ -98,10 +108,15 @@
     contents:
       - id: ClothingUniformJumpsuitColorPink
       - id: ClothingUniformJumpskirtColorPink
+<<<<<<< Updated upstream
 # Apparently doesnt exist atm will fix later - Nep
 #     - id: ClothingShoesColorPink
 #        amount: 2
 # Goobstation Sock Stuff The forbiden sock
+=======
+      - id: ClothingShoesColorPink
+        amount: 2
+>>>>>>> Stashed changes
       - id: ClothingUnderSocksCoder
 
 - type: entity
@@ -118,7 +133,10 @@
       - id: ClothingHeadBandBlack
       - id: ClothingHeadBandSkull
         prob: 0.4
+<<<<<<< Updated upstream
 # Goobstation Sock Stuff
+=======
+>>>>>>> Stashed changes
       - id: ClothingUnderSocksStripedGreyDark
 
 - type: entity
@@ -133,5 +151,8 @@
       - id: ClothingShoesColorBlack
         amount: 2
       - id: ClothingHeadBandGreen
+<<<<<<< Updated upstream
 # Goobstation Sock Stuff
+=======
+>>>>>>> Stashed changes
       - id: ClothingUnderSocksStripedWhiteandGreen

@@ -13,5 +13,8 @@
       - id: NodeScanner
       - id: NetworkConfigurator
         prob: 0.5
+<<<<<<< Updated upstream
 # Goobstation Sock Stuff
+=======
+>>>>>>> Stashed changes
       - id: ClothingUnderSocksStripedScience

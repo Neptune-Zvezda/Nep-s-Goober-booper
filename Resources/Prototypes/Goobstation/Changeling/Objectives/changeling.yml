@@ -5,11 +5,22 @@
   components:
   - type: Objective
     difficulty: 1.5 # unused but necessary i guess
-    issuer: hivemind
+    issuer: objective-issuer-hivemind
   - type: RoleRequirement
     roles:
       components:
       - ChangelingRole
+
+- type: entity
+  parent: [BaseChangelingObjective, BaseSurviveObjective]
+  id: ChangelingSurviveObjective
+  name: Survive
+  description: I must survive no matter what.
+  components:
+  - type: Objective
+    icon:
+      sprite: Goobstation/Changeling/changeling_abilities.rsi
+      state: stasis_exit
 
 - type: entity
   parent: BaseChangelingObjective
